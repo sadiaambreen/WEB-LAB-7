@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 7 TASK 6</title>
+    <link href="TASK6.CSS" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section>
+            <div class="main">
+                <div class="child">
+                    <div class="children">
+                        <h1 class="heading">
+                            MAP METHOD ()
+                        </h1>
+                    </div>
+                    <div class="children">
+                        <label for="" class="same"><b>Array Use[3, 5, 7, 4, 9, 8];</b></label>                       
+                        <!-- <input type="text" id="input" class="same" placeholder="Number Less than 10"> -->
+                        <textarea name="" id="input" class="same" cols="30" rows="10" placeholder="Number Less than 10"></textarea>
+                        <input type="button" id="btn" class="same" value="Enter" onclick="cases()">
+                    </div>
+                </div>                       
+            </div>
+        </section>
+    </main>
+    <script>
+        var result=document.getElementById('input');
+        function cases(){
+            result.value="";
+                var arr = [3, 5, 7, 4, 9, 8];;
+                var newArr = arr.map(function(val, index){
+                    return {key:index, value:Math.sqrt(val)};
+                })
+                newArr.forEach(element => {
+                    result.value = result.value + `${element.value}, `
+                });      
+            }       
+   
+    </script>
+</body>
+</html>

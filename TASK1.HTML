@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 7 TASK 1</title>
+    <link href="TASK1.CSS" rel="stylesheet">
+</head>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="main">
+                <div class="child">
+                    <div class="children">
+                        <h1 class="heading">
+                            CALCULATING VOLUME OF RECTANGLE USING FUCTION CURRING
+                        </h1>
+                    </div>
+                    <div class="children">
+                        <label for="" class="same"><b>LENGTH</b></label>
+                        <input type="number" id="input" class="same" placeholder="Enter length Number">
+                        <label for="" class="same"><b>WIDTH</b></label>
+                        <input type="number" id="input2" class="same" placeholder="Enter Width Number">
+                        <label for="" class="same"><b>heigth</b></label>
+                        <input type="number" id="input3" class="same" placeholder="Enter Height Number">
+                        <label for="" class="same"><b>VOLUME</b></label>
+                        <input type="number" id="input4" class="same" placeholder="Result Of Volume">
+                        <input type="button" id="btn" class="same" value="Calculate" onclick="volumeOfRectangle()">
+                    </div>
+                </div>                       
+            </div>
+        </section>
+    </main>
+    <script>
+        var length=document.getElementById('input');
+        var width=document.getElementById('input2');
+        var heigth=document.getElementById('input3');
+        var volume=document.getElementById('input4');
+            function volumeOfRectangle()
+            {
+            if(length.value.length>0 && width.value.length>0 && heigth.value.length>0)
+            { 
+                volume.value=rectangle(length.value)(width.value)(heigth.value) // 6
+            } 
+            length.value="";
+            width.value="";
+            heigth.value="";
+        }  
+        function rectangle(x) {
+            return (y) => {
+                return (z) => {
+                    return x * y * z
+                }}}
+    </script>
+</body>
+</html>

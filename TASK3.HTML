@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 7 TASK 3</title>
+    <link href="TASK3.CSS" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section>
+            <div class="main">
+                <div class="child">
+                    <div class="children">
+                        <h1 class="heading">
+                           COMPOSE-FUNCTION[F(G(X))] 
+                        </h1>
+                    </div>
+                    <div class="children">
+                        <label for="" class="same"><b>NUMBER</b></label>
+                        <input type="number" id="input" class="same" placeholder="Enter  Number">
+                        <label for="" class="same"><b>RESULT</b></label>
+                        <input type="number" id="input4" class="same" placeholder="Result Of Volume">
+                        <input type="button" id="btn" class="same" value="Check" onclick="check()">
+                    </div>
+                </div>                       
+            </div>
+        </section>
+    </main>
+    <script>
+        var inp=document.getElementById('input');
+        var result=document.getElementById('input4');
+        function check()
+        {
+            if(inp.value.length>0)
+            {
+                const compose = (f,g) => a => f(g(a));
+                const g = (x) => x + 15
+                const f = (x) => x / 2
+                const fg = compose(f,g)
+                result.value=fg(inp.value);
+                inp.value="";
+            }   
+        }
+
+    </script>
+</body>
+</html>
+

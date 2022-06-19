@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 7 TASK 2</title>
+    <link href="TASK2.CSS" rel="stylesheet">
+</head>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="main">
+                <div class="child">
+                    <div class="children">
+                        <h1 class="heading">
+                           "CONCEPTS OF CLOSURE FUNCTION"
+                        </h1>
+                        <h1 >
+                            USER DETAILS:  
+                        </h1>
+                    </div>
+                    <div class="children">
+                        <label for="" class="same"><b>NAME</b></label>
+                        <input type="text" id="input" class="same" placeholder="Enter Name....">
+                        <label for="" class="same"><b>AGE</b></label>
+                        <input type="number" id="input2" class="same" placeholder="Enter Age ...">
+                        <label for="" class="same"><b>SALARY</b></label>
+                        <input type="number" id="input3" class="same" placeholder="Enter Salary ... ">
+                        <input type="button" id="btn" class="same" value="Calculate" onclick="functionclosure()">
+                    </div>
+                </div>                       
+            </div>
+        </section>
+    </main>
+    <script>
+        var name1=document.getElementById('input');
+        var age=document.getElementById('input2');
+        var salary=document.getElementById('input3');
+        function functionclosure()
+        {
+            if(name1.value.length>0 && age.value.length>0 && salary.value.length>0)
+            { 
+                var innerFunc = Profile(name1.value,age.value,salary.value);
+                innerFunc(); 
+            } 
+            length.value="";
+            width.value="";
+            heigth.value="";
+        }        
+        function Profile(name,age,salary) {
+        function greetingMsg() {
+            alert(`Your Name Is ${name},Your Age Is ${age},Your Salary Is ${salary}`);
+        }
+        return greetingMsg;
+        }
+    </script>
+</body>
+</html>

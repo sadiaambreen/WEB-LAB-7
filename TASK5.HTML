@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 7 TASK 5</title>
+    <link href="TASK5.CSS" rel="stylesheet">
+</head>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="main">
+                <div class="child">
+                    <div class="children">
+                        <h1 class="heading">
+                            IS POSITIVE FUNCTION()
+                        </h1>
+                    </div>
+                    <div class="children">
+                        <label for="" class="same"><b>Array Use[2,5,7,9,11,15,25,79,111]</b></label>                       
+                        <input type="text" id="input" class="same" placeholder="Number Less than 10">
+                        <input type="button" id="btn" class="same" value="Enter" onclick="cases()">
+                    </div>
+                </div>                        
+            </div>
+        </section>
+    </main>
+    <script>
+        var age=document.getElementById('input');
+        var amount=document.getElementById('input2');
+        function consuming(){
+            if(age.value.length>0 && amount.value.length>0)
+                {
+                    consumed(age.value,amount.value);
+                }
+                age.value='';
+                amount.value='';
+        }
+        var consumed=(age,amount)=>
+            {        
+                   var mxage=60;
+                   var consume=mxage*12*30*amount;
+                   var current=age*12*30*amount;
+                   alert(`Current Consumed Amount is ${current} You  need ${consume-current} to last you until the ripe old age of ${mxage}`)       
+        }
+    </script>
+</body>
+</html>
